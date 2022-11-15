@@ -16,7 +16,13 @@
 		971B1DE829205C08004456EF /* TicTacBombUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B1DE729205C08004456EF /* TicTacBombUITestsLaunchTests.swift */; };
 		971B1DFA2920610C004456EF /* GameSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B1DF92920610C004456EF /* GameSessionModel.swift */; };
 		971B1E0229207299004456EF /* GameSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B1E0129207299004456EF /* GameSessionView.swift */; };
-		971B1E042920C548004456EF /* GameSessionVIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B1E032920C548004456EF /* GameSessionVIP.swift */; };
+		971B1E042920C548004456EF /* GameSessionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B1E032920C548004456EF /* GameSessionInteractor.swift */; };
+		971B1E082929BE09004456EF /* GameHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B1E072929BE09004456EF /* GameHeaderView.swift */; };
+		971B1E0A292B4F61004456EF /* GameKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B1E09292B4F61004456EF /* GameKeyboardView.swift */; };
+		971B1E0C292B5CF8004456EF /* GameGuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B1E0B292B5CF8004456EF /* GameGuessView.swift */; };
+		971B1E4D29319460004456EF /* GameKeyboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B1E4C29319460004456EF /* GameKeyboardPresenter.swift */; };
+		971B1E50293199F7004456EF /* GameKeyboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B1E4F293199F7004456EF /* GameKeyboardInteractor.swift */; };
+		971B1E5329319EC7004456EF /* GameSessionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B1E5229319EC6004456EF /* GameSessionPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +55,13 @@
 		971B1DE729205C08004456EF /* TicTacBombUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacBombUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		971B1DF92920610C004456EF /* GameSessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSessionModel.swift; sourceTree = "<group>"; };
 		971B1E0129207299004456EF /* GameSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSessionView.swift; sourceTree = "<group>"; };
-		971B1E032920C548004456EF /* GameSessionVIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSessionVIP.swift; sourceTree = "<group>"; };
+		971B1E032920C548004456EF /* GameSessionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSessionInteractor.swift; sourceTree = "<group>"; };
+		971B1E072929BE09004456EF /* GameHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHeaderView.swift; sourceTree = "<group>"; };
+		971B1E09292B4F61004456EF /* GameKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameKeyboardView.swift; sourceTree = "<group>"; };
+		971B1E0B292B5CF8004456EF /* GameGuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGuessView.swift; sourceTree = "<group>"; };
+		971B1E4C29319460004456EF /* GameKeyboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameKeyboardPresenter.swift; sourceTree = "<group>"; };
+		971B1E4F293199F7004456EF /* GameKeyboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameKeyboardInteractor.swift; sourceTree = "<group>"; };
+		971B1E5229319EC6004456EF /* GameSessionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSessionPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,19 +149,49 @@
 		971B1DF529205C2C004456EF /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				971B1DF629205C47004456EF /* GameSession */,
+				971B1DF629205C47004456EF /* Game */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		971B1DF629205C47004456EF /* GameSession */ = {
+		971B1DF629205C47004456EF /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				971B1DF92920610C004456EF /* GameSessionModel.swift */,
-				971B1E0129207299004456EF /* GameSessionView.swift */,
-				971B1E032920C548004456EF /* GameSessionVIP.swift */,
+				971B1E5129319E6E004456EF /* Session */,
+				971B1E4E2931993E004456EF /* Keyboard */,
+				971B1E062929BDF1004456EF /* Header */,
 			);
-			path = GameSession;
+			path = Game;
+			sourceTree = "<group>";
+		};
+		971B1E062929BDF1004456EF /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				971B1E072929BE09004456EF /* GameHeaderView.swift */,
+				971B1E0B292B5CF8004456EF /* GameGuessView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		971B1E4E2931993E004456EF /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				971B1E09292B4F61004456EF /* GameKeyboardView.swift */,
+				971B1E4C29319460004456EF /* GameKeyboardPresenter.swift */,
+				971B1E4F293199F7004456EF /* GameKeyboardInteractor.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		971B1E5129319E6E004456EF /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				971B1E0129207299004456EF /* GameSessionView.swift */,
+				971B1DF92920610C004456EF /* GameSessionModel.swift */,
+				971B1E032920C548004456EF /* GameSessionInteractor.swift */,
+				971B1E5229319EC6004456EF /* GameSessionPresenter.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,11 +324,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				971B1E4D29319460004456EF /* GameKeyboardPresenter.swift in Sources */,
+				971B1E5329319EC7004456EF /* GameSessionPresenter.swift in Sources */,
+				971B1E50293199F7004456EF /* GameKeyboardInteractor.swift in Sources */,
+				971B1E0A292B4F61004456EF /* GameKeyboardView.swift in Sources */,
 				971B1DCD29205C04004456EF /* ContentView.swift in Sources */,
+				971B1E0C292B5CF8004456EF /* GameGuessView.swift in Sources */,
 				971B1E0229207299004456EF /* GameSessionView.swift in Sources */,
-				971B1E042920C548004456EF /* GameSessionVIP.swift in Sources */,
+				971B1E042920C548004456EF /* GameSessionInteractor.swift in Sources */,
 				971B1DFA2920610C004456EF /* GameSessionModel.swift in Sources */,
 				971B1DCB29205C04004456EF /* TicTacBombApp.swift in Sources */,
+				971B1E082929BE09004456EF /* GameHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
